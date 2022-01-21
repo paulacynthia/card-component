@@ -22,23 +22,32 @@
   border-radius: 1rem;
 }
 
+.image-avatar {
+  width: 3rem;
+  border-radius: 200px;
+  border: 1px solid var(--white);
+}
+
+body {
+  background-color: var(--main);
+}
+
 .card {
   background-color: var(--card);
   margin: 0 auto;
-  max-width: 25rem;
+  max-width: 22rem;
   max-height: 40rem;
   border-radius: 1rem;
+  box-shadow: 2rem;
 }
 
 .title {
-  margin-left: 1.4375rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   color: var(--white);
 }
 
 .subtitle {
-  margin-left: 1.4375rem;
-
   margin-top: 1rem;
   color: var(--line);
   font-weight: 400;
@@ -50,7 +59,6 @@
 }
 
 .container {
-  margin-left: 1.4375rem;
   margin-top: 1rem;
   max-width: 18rem;
   display: flex;
@@ -77,18 +85,30 @@
 
 .divider {
   font-size: 14px;
-  color: var(--line);
+  color: var(--soft);
 
-  margin: 32px 0;
+  margin: 20px 0;
   display: flex;
   align-items: center;
 }
 
 .divider:before {
-  margin-left: 1.4375rem;
   max-width: 18rem;
   content: "";
   flex: 1;
   height: 1px;
   background: var(--line);
+}
+
+.container.footer {
+  align-items: center;
+}
+
+.teste {
+  margin-right: 3rem;
+  color: var(--line);
+}
+
+span {
+  color: var(--white);
 }
