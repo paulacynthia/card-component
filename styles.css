@@ -14,12 +14,48 @@
   --white: hsl(0, 0%, 100%);
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.image-box {
+  position: relative;
+  cursor: pointer;
+}
+
+.teste {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--cyan);
+  border-radius: 1rem;
+  visibility: hidden;
+  transition: initial 0.5s;
+}
+
+.image-hover {
+  display: flex;
+  margin: 100px auto;
+}
+
+.image-box:hover .teste {
+  visibility: visible;
+}
+
+.image-hover:hover {
+  transform: scale(1.2);
+}
+
 .image {
-  width: 18rem;
-  height: 18rem;
+  width: 16rem;
+  height: 16rem;
   display: block;
   margin: 0 auto;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem;
+  cursor: pointer;
 }
 
 .image-avatar {
@@ -32,19 +68,30 @@ body {
   background-color: var(--main);
 }
 
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card {
   background-color: var(--card);
-  margin: 0 auto;
-  max-width: 22rem;
-  max-height: 40rem;
+  max-width: 20rem;
+  max-height: 36rem;
   border-radius: 1rem;
-  box-shadow: 2rem;
 }
 
 .title {
   margin-top: 2rem;
   margin-bottom: 2rem;
   color: var(--white);
+}
+
+.title:hover {
+  cursor: pointer;
+  color: var(--cyan);
 }
 
 .subtitle {
@@ -54,7 +101,9 @@ body {
 }
 
 .content {
-  margin-top: 5rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+
+  border-radius: 1rem;
   padding: 2rem;
 }
 
@@ -66,7 +115,7 @@ body {
   justify-content: space-between;
 }
 
-.ethe {
+.eth {
   color: var(--cyan);
   text-decoration: none;
   font-weight: 500;
@@ -83,7 +132,7 @@ body {
   display: inline-block;
 }
 
-.divider {
+.separator {
   font-size: 14px;
   color: var(--soft);
 
@@ -92,7 +141,7 @@ body {
   align-items: center;
 }
 
-.divider:before {
+.separator:before {
   max-width: 18rem;
   content: "";
   flex: 1;
@@ -100,12 +149,13 @@ body {
   background: var(--line);
 }
 
-.container.footer {
+.user-information {
+  display: flex;
   align-items: center;
 }
 
-.teste {
-  margin-right: 3rem;
+.username {
+  margin-left: 1rem;
   color: var(--line);
 }
 
