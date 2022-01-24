@@ -25,7 +25,7 @@ body {
   cursor: pointer;
 }
 
-.teste {
+.image-hover-content {
   position: absolute;
   top: 0;
   height: 100%;
@@ -41,7 +41,7 @@ body {
   margin: 100px auto;
 }
 
-.image-box:hover .teste {
+.image-box:hover .image-hover-content {
   visibility: visible;
 }
 
