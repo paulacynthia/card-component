@@ -12,6 +12,7 @@
   --card: hsl(216, 50%, 16%);
   --line: hsl(215, 32%, 27%);
   --white: hsl(0, 0%, 100%);
+  --content: rgba(0, 0, 0, 0.6);
 }
 
 html,
@@ -22,6 +23,15 @@ body {
 
 .image-box {
   position: relative;
+  cursor: pointer;
+}
+
+.image {
+  width: 16rem;
+  height: 16rem;
+  display: block;
+  margin: 0 auto;
+  border-radius: 1rem 1rem;
   cursor: pointer;
 }
 
@@ -36,26 +46,17 @@ body {
   transition: initial 0.5s;
 }
 
+.image-box:hover .image-hover-content {
+  visibility: visible;
+}
+
 .image-hover {
   display: flex;
   margin: 100px auto;
 }
 
-.image-box:hover .image-hover-content {
-  visibility: visible;
-}
-
 .image-hover:hover {
   transform: scale(1.2);
-}
-
-.image {
-  width: 16rem;
-  height: 16rem;
-  display: block;
-  margin: 0 auto;
-  border-radius: 1rem 1rem;
-  cursor: pointer;
 }
 
 .image-avatar {
@@ -101,7 +102,7 @@ main {
 }
 
 .content {
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 1px 10px var(--content);
 
   border-radius: 1rem;
   padding: 2rem;
